@@ -15,7 +15,7 @@ search: true
 
 # Quickstart
 
-So what you must do to integrate communications with Solocator?
+How to integrate communications with Solocator iOS app?
 
 ## **1. Framework installation**
 
