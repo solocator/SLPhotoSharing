@@ -21,12 +21,28 @@
  */
 @interface SLAppDataPackage: SLCoding
 
+/// The key containing the key to the data sent from the.
 extern NSString * const SLAppDataPackageUTI;
 
+/**
+ The property contains the name of the application that sent the data packet.
+ */
 @property (copy, nonatomic, readonly) NSString *sourceApplicationName;
+/**
+ The property contains the application bundle identifier of the application that sent the data packet.
+ */
 @property (copy, nonatomic, readonly) NSString *sourceApplicationIdentifier;
+/**
+ The property contains the application version of the application that sent the data packet.
+ */
 @property (copy, nonatomic, readonly) NSString *sourceApplicationVersion;
+/**
+ The property contains the application build of the application that sent the data packet.
+ */
 @property (copy, nonatomic, readonly) NSString *sourceApplicationBuild;
+/**
+ This is a model with data encrypted in to the data.
+ */
 @property (strong, nonatomic, readonly) NSData *payload;
 
 @end

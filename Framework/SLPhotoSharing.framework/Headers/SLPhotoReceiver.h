@@ -52,6 +52,9 @@ typedef void(^SLPhotoReceiverCompletionHandler)(BOOL sent, NSError *error);
  */
 @property (nonatomic, strong) SLResponseModel *responseModel;
 
+/**
+ Singleton object of SLPhotoReceiver.
+ */
 + (SLPhotoReceiver *)sharedObject;
 
 /**
