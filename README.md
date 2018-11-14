@@ -184,7 +184,7 @@ Nothing needs to be done. Everything is connected in the Bridging_Header file.
 ```
 
 
-To open the application, you need to write the following code.
+To open the application, you need to write the following code. You can either open the AppStore or VPP version of Solocator by providing the relevant type: SolocatorAppAS or SolocatorAppVPP accordingly.
 
 > Example
 
@@ -199,7 +199,7 @@ To open the application, you need to write the following code.
 
 SLRequestModel *model = [SLRequestModel new];
 [model setSourceURLShceme:@"<Your Application's URL Scheme>"];
-[[SLPhotoReceiver sharedObject] openSolocatorWith:model completionHandler:^(BOOL sent, NSError *error) {
+[[SLPhotoReceiver sharedObject] openSolocatorApp:SolocatorAppAS with:model completionHandler:^(BOOL sent, NSError *error) {
 
 }];
 ```
@@ -215,9 +215,9 @@ SLPhotoReceiver.sharedObject().delegate = self
 
 let model = SLRequestModel()
 model.sourceURLShceme = "<Your Application's URL Scheme>"
-SLPhotoReceiver.sharedObject().openSolocator(with: model) { (sent, error) in
+SLPhotoReceiver.sharedObject()?.open(SolocatorApp.AS, with: model, completionHandler: { (sent, error) in
 
-}
+})
 
 ...
 

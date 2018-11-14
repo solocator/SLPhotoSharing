@@ -10,6 +10,11 @@
 #import <SLPhotoSharing/SLRequestModel.h>
 #import <SLPhotoSharing/SLResponseModel.h>
 
+typedef NS_ENUM(NSUInteger, SolocatorApp) {
+    SolocatorAppAS = 0,
+    SolocatorAppVPP
+};
+
 /**
  The delegate of a SLPhotoReceiver object must adopt the SLPhotoReceiverDelegate protocol.
  */
@@ -69,8 +74,7 @@ typedef void(^SLPhotoReceiverCompletionHandler)(BOOL sent, NSError *error);
  *  @param requestModel The model contains the parameters required for opening a "Solocator" application.
  *  @param completionHandler is returned upon success or an error in opening the "Solocator" application.
  */
-- (void)openSolocatorWith:(SLRequestModel *_Nonnull)requestModel
-        completionHandler:(SLPhotoReceiverCompletionHandler)completionHandler;
+- (void)openSolocatorApp:(SolocatorApp)appType with:(SLRequestModel *)requestModel completionHandler:(void(^)(BOOL sent, NSError *error))completionHandler;
 
 @end
 
