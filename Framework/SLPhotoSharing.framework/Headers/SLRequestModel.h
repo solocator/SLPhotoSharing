@@ -11,7 +11,7 @@
 /**
  A model that contains data for requesting images and other data from the "Solocator" application.
  */
-@interface SLRequestModel : SLCoding
+@interface SLRequestModel : SLCoding <NSSecureCoding>
 
 /// URL Scheme of your application, link to your application that you specified in the CFBundleURLTypes
 @property (nonatomic, strong) NSString *sourceURLShceme;

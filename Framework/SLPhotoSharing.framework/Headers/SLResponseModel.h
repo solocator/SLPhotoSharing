@@ -11,46 +11,46 @@
 /**
  A data model containing all the data of the photo taken in the "Solocator" application.
 */
-@interface SLResponseModel : SLCoding
+@interface SLResponseModel : SLCoding <NSSecureCoding>
 
 /// Key for response key
-extern NSString * const SLResponseKey;
+extern NSString * _Nonnull const SLResponseKey;
 /// Key for image
-extern NSString * const SLImage;
+extern NSString * _Nonnull const SLImage;
 /// Key for date
-extern NSString * const SLDate;
+extern NSString * _Nonnull const SLDate;
 /// Key for exif data
-extern NSString * const SLExifData;
+extern NSString * _Nonnull const SLExifData;
 /// Key for project name
-extern NSString * const SLProjectName;
+extern NSString * _Nonnull const SLProjectName;
 /// Key for watermark
-extern NSString * const SLWatermark;
+extern NSString * _Nonnull const SLWatermark;
 /// Key for descriptions
-extern NSString * const SLDescriptions;
+extern NSString * _Nonnull const SLDescriptions;
 /// Key for heading elevation
-extern NSString * const SLHeadingElevation;
+extern NSString * _Nonnull const SLHeadingElevation;
 /// Key for locality
-extern NSString * const SLLocality;
+extern NSString * _Nonnull const SLLocality;
 /// Key for pos
-extern NSString * const SLPos;
+extern NSString * _Nonnull const SLPos;
 /// Key for altitude
-extern NSString * const SLAltitude;
+extern NSString * _Nonnull const SLAltitude;
 /// Key for bearing
-extern NSString * const SLBearing;
+extern NSString * _Nonnull const SLBearing;
 /// Key for latitude
-extern NSString * const SLLatitude;
+extern NSString * _Nonnull const SLLatitude;
 /// Key for longitude
-extern NSString * const SLLongitude;
+extern NSString * _Nonnull const SLLongitude;
 /// Key for accuracy
-extern NSString * const SLAccuracy;
+extern NSString * _Nonnull const SLAccuracy;
 /// Key for distance
-extern NSString * const SLDistance;
+extern NSString * _Nonnull const SLDistance;
 /// Key for metric units
-extern NSString * const SLMetricUnits;
+extern NSString * _Nonnull const SLMetricUnits;
 /// Key for true north
-extern NSString * const SLTrueNorth;
+extern NSString * _Nonnull const SLTrueNorth;
 /// Key for canceled
-extern NSString * const SLCanceled;
+extern NSString * _Nonnull const SLCanceled;
 
 /// Received photograph.
 @property (nullable, nonatomic, strong, readonly) UIImage *image;
@@ -130,20 +130,20 @@ extern NSString * const SLCanceled;
  
  SLCanceled
  */
-- (instancetype)initWith:(NSDictionary *)dict;
+- (instancetype _Nonnull)initWith:(NSDictionary *_Nonnull)dict;
 
 /**
  Initialize model from all photo components
  */
-- (instancetype)initWithImage:(UIImage *)image
-                         date:(NSDate *)date
-                     exifData:(NSData *)exifData
-                  projectName:(NSString *)projectName
-                    watermark:(NSString *)watermark
-                 descriptions:(NSString *)descriptions
-             headingElevation:(NSString *)headingElevation
-                     locality:(NSString *)locality
-                          pos:(NSString *)pos
+- (instancetype _Nonnull)initWithImage:(UIImage *_Nullable)image
+                         date:(NSDate *_Nullable)date
+                     exifData:(NSData *_Nullable)exifData
+                  projectName:(NSString *_Nullable)projectName
+                    watermark:(NSString *_Nullable)watermark
+                 descriptions:(NSString *_Nullable)descriptions
+             headingElevation:(NSString *_Nullable)headingElevation
+                     locality:(NSString *_Nullable)locality
+                          pos:(NSString *_Nullable)pos
                      altitude:(CGFloat) altitude
                       bearing:(CGFloat) bearing
                      latitude:(CGFloat) latitude

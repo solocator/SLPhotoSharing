@@ -24,13 +24,12 @@
  
  Subclasses must override this method if they perform SLCoding.
  
- @attention Use only if the data is encoded using encodeObject: forKey:.
+ @attention Use only if the data is encoded using encodeObject:
  
- @param data The data archive is encoded with encodeObject: forKey:
- @param key The key with which the data was encoded.
+ @param data The data archive is encoded with encodeObject:
  @return An Objective-C object
  */
-- (instancetype)initWithData:(NSData *)data andKey:(NSString *)key;
+- (instancetype)initWithData:(NSData *)data;
 
 /**
  Initializes the receiver for decoding an archive previously encoded by SLCoding.
@@ -47,9 +46,7 @@
 - (instancetype)modelWithData:(NSData *)data;
 
 /**
- Encodes the object and associates it with the string key.
-
- Encodes and returns key archived data.
+ Encodes and returns archived data.
  
  Subclasses must override this method if they perform SLCoding.
  
@@ -60,15 +57,14 @@
 - (NSData *)dataRepresentation;
 
 /**
- Encodes the object and associates it with the string key.
+ Encodes the object.
  
  Subclasses must override this method to identify multiple encodings of objv and encode a reference to objv instead.
 
  @param object An Objective-C object
- @param key the key with which the data was encoded
- @return the data key archive.
+ @return the data archive.
  */
-- (NSData *)encodeObject:(id)object forKey:(NSString *)key;
+- (NSData *)encodeObject:(id)object;
 
 /**
  Create SLAppDataPackage model with an encoded SLCoding class

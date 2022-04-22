@@ -7,7 +7,7 @@ language_tabs:
 
 
 toc_footers:
-- <a href='http://solocator.com/'>Solocator web page</a>
+- <a href='https://solocator.com/'>Solocator web page</a>
 - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 search: true

@@ -19,7 +19,7 @@
  
  The data packet is transmitted via the clipboard.
  */
-@interface SLAppDataPackage: SLCoding
+@interface SLAppDataPackage: SLCoding <NSSecureCoding>
 
 /// The key containing the key to the data sent from the.
 extern NSString * const SLAppDataPackageUTI;
