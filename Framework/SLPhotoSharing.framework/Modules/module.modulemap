@@ -1,6 +1,6 @@
 framework module SLPhotoSharing {
   umbrella header "SLPhotoSharing.h"
-
   export *
+
   module * { export * }
 }

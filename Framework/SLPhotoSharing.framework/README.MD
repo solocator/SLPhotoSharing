@@ -103,7 +103,7 @@ You must replace <code>"URL Scheme of your application"</code> with Your applica
 ```xml
 <key>LSApplicationQueriesSchemes</key>
 <array>
-<string>Solocator-2.0</string>
+<string>Solocator</string>
 </array>
 ```
 

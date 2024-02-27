@@ -40,7 +40,7 @@ typedef NS_ENUM(NSUInteger, SLAppDataSharingErrorType) {
  Folowing code must be in Your project's info.plist:
  <key>LSApplicationQueriesSchemes</key>
  <array>
- <string>Solocator-2.0</string>
+ <string>Solocator</string>
  </array>
  @param scheme URL scheme to application
  @param dataPackage model with data on package
